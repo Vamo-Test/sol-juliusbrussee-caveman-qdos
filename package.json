@@ -1,0 +1,14 @@
+{
+  "name": "caveman-api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A zero-dependency Cloudflare Worker serving a small JSON API with health, echo, and caveman knowledge resources.",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.30.0"
+  }
+}
