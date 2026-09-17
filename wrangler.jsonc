@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "caveman-api",
+  "name": "sol-juliusbrussee-caveman-qdos",
   "main": "src/index.ts",
   "compatibility_date": "2023-10-01",
   "observability": { "enabled": true }

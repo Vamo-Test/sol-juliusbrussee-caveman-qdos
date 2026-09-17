@@ -1,8 +1,8 @@
-// caveman-api — A zero-dependency Cloudflare Worker serving a small JSON API with health, echo, and caveman knowledge resources.
+// sol-juliusbrussee-caveman-qdos — Unearth ancient wisdom through our knowledge API.
 // Zero-dependency Cloudflare Worker JSON API. Deploys as-is to *.workers.dev.
 
-/** Seed data for GET /knowledge. Replace with real content when building. */
-const knowledge: unknown[] = [{"id":1,"text":"Cavemen used fire for cooking and warmth."},{"id":2,"text":"The earliest known cave paintings are over 40,000 years old."}];
+/** Seed data for GET /wisdoms. Replace with real content when building. */
+const wisdoms: unknown[] = [{"id":1,"text":"The early morning dew nourishes the earth."},{"id":2,"text":"Fire keeps the night at bay."}];
 
 const json = (data: unknown, status = 200): Response =>
   new Response(JSON.stringify(data, null, 2), {
@@ -15,11 +15,11 @@ export default {
     const { pathname } = new URL(request.url);
 
     if (pathname === "/" || pathname === "/health") {
-      return json({ ok: true, service: "caveman-api", now: Date.now() });
+      return json({ ok: true, service: "sol-juliusbrussee-caveman-qdos", now: Date.now() });
     }
 
-    if (pathname === "/knowledge") {
-      return json({ knowledge });
+    if (pathname === "/wisdoms") {
+      return json({ wisdoms });
     }
 
     if (pathname === "/echo") {
